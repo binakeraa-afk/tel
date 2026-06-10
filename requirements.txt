@@ -1,0 +1,41 @@
+# ──────────────────────────────────────────────────────────────────────────────
+#  Dépendances runtime — versions épinglées (builds reproductibles)
+# ──────────────────────────────────────────────────────────────────────────────
+
+# Telegram (asynchrone)
+aiogram==3.13.1
+
+# Configuration typée
+pydantic==2.9.2
+pydantic-settings==2.5.2
+
+# ORM + migrations + drivers
+SQLAlchemy[asyncio]==2.0.35
+alembic==1.13.3
+asyncpg==0.29.0            # PostgreSQL (prod / Railway)
+aiosqlite==0.20.0          # SQLite (dev / repli)
+
+# API X / Twitter — mode "official" (OAuth + upload média chunked)
+tweepy==4.14.0
+
+# API X / Twitter — mode "unofficial" (sans compte développeur, via le compte X)
+# Plage de version (le client non-officiel évolue souvent) : on prend une 2.x récente.
+twikit>=2.1.0,<3.0.0
+
+# Planification (1 post / 3h)
+APScheduler==3.10.4
+
+# File d'attente optionnelle (Redis) — la file par défaut est la base de données
+redis==5.0.8
+
+# Téléchargement de secours (gros fichiers via serveur Bot API local possible)
+yt-dlp==2024.11.4
+
+# Logging structuré
+structlog==24.4.0
+
+# Retry
+tenacity==9.0.0
+
+# Chargement .env en local
+python-dotenv==1.0.1
